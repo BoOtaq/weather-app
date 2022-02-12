@@ -1,0 +1,52 @@
+<div class="main-container" *ngIf="weather">
+    <app-feather-icons></app-feather-icons>
+    <div class="main-wrapper">
+        <div class="informations-presented">
+            <div class="informations-location">
+                <h4>{{ weather.name }}, {{ weather.sys.country }}</h4>
+            </div>
+            <div *ngIf="weather.isDay" class="informations-day_icon">
+                <i data-feather="sun" class></i>
+            </div>
+            <div *ngIf="!weather.isDay" class="informations-night_icon">
+                <i data-feather="moon" class></i>
+            </div>
+            <div class="informations-temperature">
+                <span class="informations-fill"></span>
+                <h1>{{weather.temp_celcius}}</h1><span>°C</span>
+            </div>
+            <div class="informations-additional">
+                <div class="informations-upper_row">
+                    <div>
+                        <p>Feels like {{weather.temp_feels_like}}°C</p>
+                    </div>
+                    <div>
+                        <p>Wind <i data-feather="wind" width="16px" height="16px"></i> {{weather.wind}} km/h</p>
+                    </div>
+                    <div>
+                        <p>
+                            Visibility {{weather.visibility}}<span>km</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="informations-down_row">
+                    <div>
+                        <p>Barometer {{weather.pressure}} mb</p>
+                    </div>
+                    <div>
+                        <p>Humidity {{weather.humidity}}%</p>
+                    </div>
+                    <div>
+                        <p> Max/Min {{weather.temp_max}}°/ {{weather.temp_min}}°C</p>
+                    </div>
+                </div>
+                <div class="informations-sr_ss">
+                    <span><i data-feather="sunrise" width="16px" height="16px"> </i>Sunrise: {{weather.sunrise_time}}</span><span><i data-feather="sunset" width="16px" height="16px"></i>Sunset: {{weather.sunset_time}}</span>
+                </div>
+                <div class="informations-update" (click)="refresh()">
+                    <p>Last updated on: {{live_time}}</p><i data-feather="refresh-cw" width="16px" height="16px" class></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

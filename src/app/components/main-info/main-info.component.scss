@@ -1,0 +1,128 @@
+.main {
+    &-container {
+        margin-top: 24px;
+        padding-top: 24px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &-wrapper {
+        padding-top: 24px;
+        display: flex;
+        width: 1100px;
+        max-width: 1100px;
+        margin: 0 auto;      
+    }
+}
+
+.informations {
+    &-presented {
+        width: 50%;
+        height: 710px;
+        background-color: white;
+        border: none;
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(5, 39, 87) 75%, rgb(7, 49, 107) 100%);
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-radius: 25px;
+        margin: 0 auto;
+        -webkit-box-shadow: 0 0 20px rgb(4, 32, 71);
+        box-shadow: 0 0 20px rgb(7, 49, 107);
+    }
+
+    &-presented:hover {
+        background-color: white;
+        border: none;
+    }
+
+    &-refresh {
+        float: right;
+    }
+
+    &-location {
+       margin-top: 24px;
+       font-size: 2rem;
+    }
+
+    &-day_icon svg {
+        margin-top: 24px;
+        width: 190px;
+        height: 190px;
+        color: yellow;
+        filter: drop-shadow(1px 1px 10px yellow);
+    }
+
+    &-night_icon svg {
+        margin-top: 24px;
+        width: 190px;
+        height: 190px;
+        color: white;
+        filter: drop-shadow(1px 1px 10px white);
+    }
+
+    &-temperature {
+        display: inline-flex;
+        font-size: 4rem;
+        margin-top: 24px;
+    }
+
+    &-temperature h1 {
+        margin-left: 24px;
+        padding-left: 24px;
+    }
+
+    &-fill {
+        width: 24px;
+    }
+
+    &-additional {
+        padding-top: 24px;
+        margin-top: 24px;
+    }
+
+    &-upper_row {
+        display: flex;
+    }
+
+    &-upper_row div {
+        width: 33%;
+    }
+
+    &-down_row {
+        padding: 24px 0 24px 0;
+        margin-top: 24px;
+        display: flex;
+    }
+
+    &-down_row div {
+        width: 33%;
+    }
+
+    &-sr_ss {
+        padding: 4px 0 20px 0;
+        margin-top: 24px;
+        width: 100%;
+    }
+
+    &-sr_ss span {
+        padding: 0 24px 0 24px;
+    }
+
+    &-sr_ss svg {
+        padding-right: 10px;
+    }
+
+    &-update {
+        padding-top: 14px;
+        float: right;
+        display:flex;
+        cursor: pointer;
+    }
+
+    &-update svg {
+        padding: 0 16px 0 10px;
+    }
+}

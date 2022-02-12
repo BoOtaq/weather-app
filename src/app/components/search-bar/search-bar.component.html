@@ -1,0 +1,21 @@
+<div class="search-container">
+    <!-- for some reason the icons form https://feathericons.com/ didn't want to work unless you put this component inside directly, so I will keep it here if I don't find another way -->
+    <app-feather-icons></app-feather-icons>
+    <div class="search-wrapper">
+    <div class="search-logo">
+        <img src="/assets/images/BW_logo.jpg" alt="">
+    </div>
+    <div class="search-field">
+        <input type="text" #userInput placeholder="Enter A State, City, etc.">
+        <i data-feather="search" ></i><button (click)="getCity(userInput.value)">Get City</button>
+    </div>
+    <!-- the click in the div below toggles the *ngIf where you can choose do you want your temperature in celsius or farenhait -->
+    <div (click)="toggleOn()" class="search-options">
+        <i data-feather="map-pin" height="16px" width="16px"></i>
+        <span>°C</span>
+        <i id="chev" height="16px" width="16px" data-feather="chevron-down"></i>  
+        <div class="search-buttons" *ngIf="isVisible"><button>°C</button> <button>°F</button></div>
+    </div>
+    </div>
+
+<!-- </i><button (click)="getValue(userInput.value)">click here</button> -->
